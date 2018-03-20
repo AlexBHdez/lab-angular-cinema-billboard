@@ -1,1 +1,95 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Verdana', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: .6em;
+  justify-content: center;
+}
+
+.sp-ar {
+  justify-content: space-around;
+}
+
+.column {
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-item {
+  flex: 0 0 18%;
+  margin: .3em;
+}
+
+img {
+  width: 100%;
+}
+
+.logo {
+  width: 25%;
+  display: block;
+  margin: 0 auto;
+}
+
+.link {
+  position: relative;
+}
+
+.link-logo::after,
+.link-logo::before {
+  content: '';
+  width: 200px;
+  height: 2px;
+  background-color: rgb(108, 29, 29);
+  position: absolute;
+  top: 150px;
+  animation-name: widthGrow;
+  animation-duration: 2s;
+}
+
+@keyframes widthGrow {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 200px;
+  }
+}
+
+
+.link-logo::after {
+  right: 300px;
+}
+
+.link-logo::before {
+  left: 300px;
+}
+
+.color {
+  color: rgb(108, 29, 29);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.img-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.img-container img:hover {
+  width: 102%;
+}
+

@@ -1,3 +1,14 @@
-<p>
-  my-home works!
-</p>
+<ul class="flex-container">
+  <li *ngFor="let movie of movies" class="flex-item">
+    <ul class="flex-container column">
+      <li class="color">ROOM {{ movie.room }}</li>
+      <li>
+        <a href="#" class="movie">
+          <div class="img-container">
+            <img src="{{ movie.poster }}" alt="{{ movie.title }}-img">
+          </div>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>

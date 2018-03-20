@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { MyHomeComponent } from './pages/my-home/my-home.component';
 import { MyMovieComponent } from './pages/my-movie/my-movie.component';
 
+import { MoviesService } from '../app/services/movies/movies.service';
+
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
@@ -27,7 +29,7 @@ const routes: Routes = [
     HttpModule,
     RouterModule.forRoot(routes),
   ],
-  providers: [],
+  providers: [MoviesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
