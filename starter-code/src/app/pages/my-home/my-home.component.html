@@ -3,7 +3,7 @@
     <ul class="flex-container column">
       <li class="color">ROOM {{ movie.room }}</li>
       <li>
-        <a href="#" class="movie">
+        <a [routerLink]="['/movie', movie.id]" class="movie">
           <div class="img-container">
             <img src="{{ movie.poster }}" alt="{{ movie.title }}-img">
           </div>

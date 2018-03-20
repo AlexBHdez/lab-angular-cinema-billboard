@@ -1,3 +1,44 @@
-<p>
-  my-movie works!
-</p>
+<div class="movie-container">
+  <div class="flex-container-start align-center">
+    <p class="color mr-20">Room {{ movieInfo.room }}</p>
+    <h1 class="title">{{ movieInfo.title }}</h1>
+  </div>
+  <div class="flex-container-start">
+    <div class="img-container">
+      <img src="{{ movieInfo.poster }}" alt="">
+    </div>
+    <div class="flex-container column">
+      <div class="flex-container-start mb-20">
+        <p class="mr-10 item1">Genres</p>
+        <ul>
+          <li *ngFor="let genre of movieInfo.genres">{{ genre }}</li>
+        </ul>
+      </div>
+      <div class="flex-container-start mb-20">
+        <p class="mr-10 item1">Year</p>
+        <p>{{ movieInfo.year }}</p>
+      </div>
+      <div class="flex-container-start mb-20">
+        <p class="mr-10 item1">Director</p>
+        <p>{{ movieInfo.director }}</p>
+      </div>
+      <div class="flex-container-start mb-20">
+        <p class="mr-10 item1">Actors</p>
+        <ul>
+          <li *ngFor="let actor of movieInfo.actors">{{ actor }}</li>
+        </ul>
+      </div>
+      <div class="flex-container-start mb-20">
+        <p class="mr-10 item1">Schedule</p>
+        <ul>
+          <li *ngFor="let hour of movieInfo.hours">{{ hour }}</li>
+        </ul>
+      </div>
+      <div class="flex-container-start column mb-20">
+        <p class="mr-10 item1 mb-20">Synopsis</p>
+        <p class="synopsis">{{ movieInfo.synopsis }}</p>
+      </div>
+    </div>
+  </div>
+  <button (click)="goHome()">HOME</button>
+</div>

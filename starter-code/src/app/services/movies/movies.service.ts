@@ -172,7 +172,7 @@ export class MoviesService {
   }
 
   getMovie(id) {
-    console.log(id);
+    return this.movies.find((movie) => movie['id'] === id);
   }
 
 }
